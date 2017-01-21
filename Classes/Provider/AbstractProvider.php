@@ -80,6 +80,11 @@ class AbstractProvider implements ProviderInterface
     protected $row = null;
 
     /**
+     * @var array
+     */
+    protected $dataStructArray;
+
+    /**
      * @var string|NULL
      */
     protected $templatePathAndFilename = null;

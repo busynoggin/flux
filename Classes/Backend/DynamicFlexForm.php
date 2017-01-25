@@ -227,7 +227,7 @@ class DynamicFlexForm
                 }
                 $formId = $form->getId();
                 if ($form->getOption(Form::OPTION_STATIC)) {
-                    
+
                     $cacheKey = $this->calculateFormCacheKey($formId);
                     if ($cache->has($cacheKey)) {
                         $dataStructArray = $cache->get($cacheKey);
@@ -329,7 +329,7 @@ class DynamicFlexForm
      *
      * @return string
      */
-    private function calculateFormCacheKey($formId): string
+    private function calculateFormCacheKey($formId)
     {
         return 'datastructure-' . $formId;
     }

@@ -840,7 +840,7 @@ class AbstractProvider implements ProviderInterface
         $table = $this->getTableName($row);
         $field = $this->getFieldName($row);
         $contentType = $this->getContentObjectType();
-        $uid = $row['uid'] ?? 0;
+        $uid = $row['uid'] ? $row['uid'] : 0;
         return 'flux-storedvariable-' . $table . '-' . $field . '-' . $uid . '-' . $variable . '-' . $contentType;
     }
 
